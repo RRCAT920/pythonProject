@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import unittest
 from unittest import TestCase
-from oop.senior.mydict import Dict
+from err_db_test.mydict import Dict
 
 
 class TestDict(TestCase):

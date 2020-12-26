@@ -14,11 +14,11 @@ assert os.environ['PATH'] == os.environ.get('PATH')
 assert os.environ.get('notakey', 'df') == 'df'
 
 # 查看当前目录的绝对路径
-print(os.path.abspath('.'))
+print(os.path.abspath(''))
 
 # 在父目录下创建子目录，并返回子目录绝对路径(父目录不支持相对路径)
 # 会根据操作系统的选择路径分隔符
-assert os.path.join('/Users/huzihao/PycharmProjects/pythonProject/oop/myio',
+assert os.path.join('/myio',
                     'kid') == '/Users/huzihao/PycharmProjects/pythonProject/oop/myio/kid'
 
 # 创建目录（存在则抛出FEE）
@@ -43,8 +43,8 @@ except FileNotFoundError:
     pass
 
 # 当前目录下的所有目录
-print([x for x in os.listdir('.') if os.path.isdir(x)])
+print([x for x in os.listdir('') if os.path.isdir(x)])
 
 # 当前目录下的所有.py
-print([x for x in os.listdir('.') if
+print([x for x in os.listdir('') if
        os.path.isfile(x) and os.path.splitext(x)[1] == '.py'])
