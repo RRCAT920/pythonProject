@@ -1,4 +1,2 @@
-print("hello,", "world")
-print('''line1
-line2
-''')
+age = int(input('Pls input your age: '))
+print('age:', age)
