@@ -10,4 +10,21 @@ def foo(s):
     return 10 / n
 
 
-foo('0')
+# foo('0')
+
+
+# reraise
+def bar(s):
+    try:
+        foo(s)
+    except ValueError as e:
+        print('ValueError')
+        raise
+
+
+# bar('0')
+
+try:
+    10 / 0
+except ZeroDivisionError as e:
+    raise ValueError('0')
