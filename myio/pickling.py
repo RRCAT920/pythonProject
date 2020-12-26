@@ -21,3 +21,6 @@ with open(file, 'r') as fp:
     s_unjs = json.load(fp, object_hook=lambda d: Student(d['name'], d['age'],
                                                          d['score']))
     print(s_unjs)
+
+    # 反序列化会创建新对象
+    assert id(s) != id(s_unjs)
