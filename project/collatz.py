@@ -11,10 +11,16 @@ def collatz(number: int) -> int:
         return number // 2
 
 
-n = int(input('Enter a number:\n'))
-while True:
-    val = collatz(n)
-    print(val)
-    if val == 1:
-        break
-    n = val
+try:
+    n = int(input('Enter a number:\n'))
+    if n < 0:
+        raise Exception("Don't input negative number")
+    while True:
+        n = collatz(n)
+        print(n)
+        if n == 1:
+            break
+except ValueError:
+    print('Please input an integer')
+except Exception as e:
+    print(e)
