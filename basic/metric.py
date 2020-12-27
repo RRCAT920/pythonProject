@@ -1,6 +1,7 @@
 import functools
 import time
 
+
 def metric(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
@@ -9,4 +10,5 @@ def metric(fn):
         end = time.time()
         print(f'{fn.__name__}执行了{end - start:.4f}ms')
         return val
+
     return wrapper
