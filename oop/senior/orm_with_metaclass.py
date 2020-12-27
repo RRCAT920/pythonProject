@@ -3,6 +3,7 @@
 使用metaclass实现一个简单ORM框架
 Object Relational Mapping: 数据库表对应类，行对应对象
 """
+from oop.senior.orm import Model, IntField, StringField
 
 
 class User(Model):
