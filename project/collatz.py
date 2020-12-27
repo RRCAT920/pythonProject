@@ -1,6 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Collatz序列
+
+Example:
+
+>>> collatz(0)
+0
+>>> collatz(3)
+10
+>>> collatz(2)
+1
 """
 
 
@@ -13,8 +22,8 @@ def collatz(number: int) -> int:
 
 try:
     n = int(input('Enter a number:\n'))
-    if n < 0:
-        raise Exception("Don't input negative number")
+    if n <= 0:
+        raise Exception("Please input a positive number")
     while True:
         n = collatz(n)
         print(n)
