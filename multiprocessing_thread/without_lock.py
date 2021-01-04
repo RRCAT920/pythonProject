@@ -2,17 +2,19 @@
 import threading
 
 balance = 0
+mutex = threading.Lock()
 
 
-def change(amount):
+def change(amount: int) -> None:
     global balance
     balance += amount
     balance -= amount
 
 
-def run(amount):
+def run(amount: int) -> None:
     for i in range(2_000_000):
-        change(amount)
+        with mutex:
+            change(amount)
 
 
 t1 = threading.Thread(target=run, args=(5,))
