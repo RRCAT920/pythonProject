@@ -20,6 +20,22 @@ class ArithmeticSequence:
     2
     >>> s[5]
     11
+    >>> del s[4]
+    Traceback (most recent call last):
+        ...
+    AttributeError: __delitem__
+    >>> len(s)
+    Traceback (most recent call last):
+        ...
+    TypeError: object of type 'ArithmeticSequence' has no len()
+    >>> s[-1]
+    Traceback (most recent call last):
+        ...
+    IndexError
+    >>> s['key']
+    Traceback (most recent call last):
+        ...
+    TypeError
     """
 
     def __init__(self, a0: int = 0, d: int = 1):
